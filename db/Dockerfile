@@ -2,8 +2,8 @@
 FROM mongo:latest
 
 # Set environment variables (optional)
-#ENV MONGO_INITDB_ROOT_USERNAME=admin
-#ENV MONGO_INITDB_ROOT_PASSWORD=mdcpassword
+ENV MONGO_INITDB_ROOT_USERNAME=admin
+ENV MONGO_INITDB_ROOT_PASSWORD=mdcpassword
 
 # Copy data file into the container
 COPY mongoData/* /
