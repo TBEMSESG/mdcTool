@@ -10,11 +10,16 @@ services:
     image: index.docker.io/appsmith/appsmith-ce
     container_name: appsmith
     ports:
-      - "8085:80"
-      - "4433:443"
+    - "8085:80"
     volumes:
       - ./app/stacks:/appsmith-stacks
     restart: unless-stopped
+
+  web:
+    build: web/.
+    ports:
+      - "80:80"
+
 
     # Uncomment the lines below to enable auto-update
     #labels:
